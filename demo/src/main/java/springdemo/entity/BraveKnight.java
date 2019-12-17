@@ -13,5 +13,8 @@ public class BraveKnight implements Knight {
         this.minstrel = minstrel;
     }
 
+    public void embarkOnQuest() {
+        quest.embark();
+    }
 
 }
