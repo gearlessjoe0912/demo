@@ -1,10 +1,10 @@
-package springdemo.entity;
+package springdemo.entity.springauto;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
 
 @Configuration
-@ComponentScan
-public class DemoConfig {
+@ComponentScan(basePackages = "springdemo.entity")
+public class CDPlayerConfig {
 }
+
