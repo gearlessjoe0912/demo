@@ -17,13 +17,14 @@ import java.util.List;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = CDPlayerConfig.class,name = "classpath:applicationContext.xml")
+//@ContextConfiguration(classes = CDPlayerConfig.class)
+@ContextConfiguration("classpath:applicationContext.xml")
 public class CDPlayerTest implements ApplicationContextAware {
 
-    @Autowired
+//    @Autowired
     private CompactDisc compactDisc;
 
-    @Autowired
+//    @Autowired
     private MediaPlayer mediaPlayer;
 
     @Autowired
@@ -45,7 +46,7 @@ public class CDPlayerTest implements ApplicationContextAware {
     }
 
     @Test
-    public void testMethodAuto(){
+    public void testMethodAuto() {
         Assert.assertNotNull(mediaPlayer);
         mediaPlayer.play();
     }

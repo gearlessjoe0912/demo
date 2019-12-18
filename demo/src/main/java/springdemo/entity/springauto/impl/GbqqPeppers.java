@@ -4,11 +4,11 @@ import org.springframework.stereotype.Component;
 import springdemo.entity.springauto.inter.CompactDisc;
 
 /**
- * 七里香
+ * 告白气球
  */
 @Component
-public class QlxPeppers implements CompactDisc {
-    private String title = "七里香";
+public class GbqqPeppers implements CompactDisc {
+    private String title = "告白气球";
     private String artist = "周杰伦";
 
     public void play() {

@@ -34,6 +34,10 @@
         <constructor-arg index="1" ref="minstrel"/>
     </bean>
 
+    <bean class="springdemo.entity.springauto.impl.GbqqPeppers"/>
+    <bean class="springdemo.entity.springauto.impl.GbqqPeppers"/>
+    <bean class="springdemo.entity.springauto.impl.GbqqPeppers"/>
+
     <aop:config>
         <aop:aspect ref="minstrel">
             <aop:pointcut id="qiedian" expression="execution(* *embarkOnQuest(..))"/>
