@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:c="http://www.springframework.org/schema/c"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:p="http://www.springframework.org/schema/p"
        xmlns:util="http://www.springframework.org/schema/util"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
         http://www.springframework.org/schema/aop
-        http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
-        http://www.springframework.org/schema/context
-        http://www.springframework.org/schema/context/spring-context-4.1.xsd
-        http://www.springframework.org/schema/util
-        http://www.springframework.org/schema/util/spring-util.xsd">
+        http://www.springframework.org/schema/aop/spring-aop-4.1.xsd">
 
 
     <bean id="quest" class="springdemo.entity.SlayDragonQuest">
@@ -34,10 +30,11 @@
         <constructor-arg index="1" ref="minstrel"/>
     </bean>
 
-    <bean class="springdemo.entity.springauto.impl.GbqqPeppers"/>
-    <bean class="springdemo.entity.springauto.impl.GbqqPeppers"/>
-    <bean class="springdemo.entity.springauto.impl.GbqqPeppers"/>
+<!--    <bean class="springdemo.entity.springauto.impl.GbqqPeppers"/>-->
+<!--    <bean class="springdemo.entity.springauto.impl.GbqqPeppers"/>-->
+<!--    <bean class="springdemo.entity.springauto.impl.GbqqPeppers"/>-->
 
+    <bean id="qlxPeppers" class="springdemo.entity.springauto.impl.QlxPeppers" c:title="发如雪"/>
     <aop:config>
         <aop:aspect ref="minstrel">
             <aop:pointcut id="qiedian" expression="execution(* *embarkOnQuest(..))"/>

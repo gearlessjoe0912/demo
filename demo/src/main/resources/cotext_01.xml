@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:utils="http://www.springframework.org/schema/util"
+       xmlns:c="http://www.springframework.org/schema/c" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+    <!--    <bean class="springdemo.entity.springauto.impl.BlackDisk">-->
+    <!--        <constructor-arg index="0" value="七里香"/>-->
+    <!--        <constructor-arg index="1" value="周杰伦"/>-->
+    <!--        <constructor-arg index="2">-->
+    <!--            <list>-->
+    <!--                <value>窗外的麻雀</value>-->
+    <!--                <value>在电线杆上多嘴</value>-->
+    <!--            </list>-->
+    <!--        </constructor-arg>-->
+    <!--    </bean>-->
+    <bean id="blackDisk" class="springdemo.entity.springauto.impl.BlackDisk" c:title="七里香" c:artist="周杰伦" c:tracks-ref="tracks"/>
+
+    <utils:list id="tracks">
+        <value>窗外的麻雀</value>
+        <value>在电线杆上多嘴</value>
+        <value>你说这一句</value>
+    </utils:list>
+
+    <!--    <bean id="cdPlayer" class="springdemo.entity.springauto.impl.CDPlayer">-->
+    <!--        <property name="compactDisc" ref="compactDisc"/>-->
+    <!--    </bean>-->
+<!--        <bean id="compactDisc" class="springdemo.entity.springauto.impl.GgxPeppers"/>-->
+    <bean id="cdPlayer" class="springdemo.entity.springauto.impl.CDPlayer" p:compactDisc-ref="compactDisc"/>
+    <bean id="compactDisc" class="springdemo.entity.springauto.impl.GgxPeppers"/>
+</beans>
